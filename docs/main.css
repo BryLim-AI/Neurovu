@@ -85,3 +85,22 @@ body{
 .secImg:hover{
     border:2px solid #C70039;
 }
+.secTitle{
+    background-color: #445069;
+    padding:10px;
+    width:200px;
+    text-align: center;
+    margin:3%;
+    border-radius: 10px;
+    color: white;
+}
+.noImg{
+    background-color: #FFF0F5;
+    padding:10px;
+    border-radius: 10px;
+    color:black;
+}
+.noImg:hover{
+    color:black;
+    border:2px solid #C70039;
+}
