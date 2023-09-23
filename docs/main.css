@@ -10,7 +10,7 @@ body{
     font-size: 18px;
 }
 
-.glass_container{
+.glass_container,.inner{
     background: rgba( 255, 255, 255, 0 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 0px );
@@ -36,17 +36,15 @@ body{
     -webkit-backdrop-filter: blur( 0px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    width:800px;
-    height:300px;
-    margin-top: 5%;
-    overflow-y: scroll;
+    width:1000px;
+    height:350px;
+    margin-top: 1%;
+    overflow-y: auto; 
     gap:10px;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .glass_container > a,
 .glass_container_2 > a{
@@ -67,6 +65,7 @@ body{
 }
 
 .glass_container::-webkit-scrollbar,
+.inner::-webkit-scrollbar, 
 .glass_container_2::-webkit-scrollbar{
     display: none;
 }
@@ -78,9 +77,11 @@ body{
     align-items: center;
 }
 .secImg{
-    width:80px;
+    width:150px;
     height:80px;
     border-radius: 10px;
+    opacity: 1;
+    z-index: 99;
 }
 .secImg:hover{
     border:2px solid #C70039;
@@ -88,7 +89,7 @@ body{
 .secTitle{
     background-color: #445069;
     padding:10px;
-    width:200px;
+    width:300px;
     text-align: center;
     margin:3%;
     border-radius: 10px;
@@ -103,4 +104,16 @@ body{
 .noImg:hover{
     color:black;
     border:2px solid #C70039;
+}
+.inner{
+    margin-top:1%;
+}
+.with-black-bg {
+    background-color: black;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 10px;
+}
+.glass_container_2 > a{
+    margin-top:5px;
 }
