@@ -24,10 +24,9 @@ body{
     gap:10px;
     display: flex;
     justify-content: center;
-    align-content: center;
-    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .glass_container_2{
     background: rgba( 255, 255, 255, 0 );
@@ -89,7 +88,7 @@ body{
 .secTitle{
     background-color: #445069;
     padding:10px;
-    width:300px;
+    width:350px;
     text-align: center;
     margin:3%;
     border-radius: 10px;
@@ -113,6 +112,8 @@ body{
     display: inline-block;
     padding: 3px;
     border-radius: 10px;
+    width:160px;
+    height:90px;
 }
 .glass_container_2 > a{
     margin-top:5px;
