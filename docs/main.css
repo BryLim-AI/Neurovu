@@ -17,8 +17,8 @@ body{
     -webkit-backdrop-filter: blur( 0px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    width:800px;
-    height:400px;
+    width:1000px;
+    height:450px;
     margin-top: 5%;
     overflow-y: scroll;
     gap:10px;
@@ -117,4 +117,13 @@ body{
 }
 .glass_container_2 > a{
     margin-top:5px;
+}
+
+.with-red-bg {
+    background-color: #cd071e;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 10px;
+    width:160px;
+    height:90px;
 }

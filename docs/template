@@ -42,5 +42,30 @@
             
         </div>
     </div>
+
+    <script src="./libs/moment.github.io_luxon_global_luxon.min.js"></script>
+    <script>
+        const now = luxon.DateTime.local();
+        const formattedDateAndDay = now.setLocale('zh').toLocaleString({
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        document.getElementById('date').textContent = formattedDateAndDay;
+    </script>
 </body>
 </html>
+
+
+
+<!--
+
+    CATALOGUE FORMAT
+
+            <a href="" class="btn btn-dark btn-lg">
+                <img width="48" height="48" style="border-radius: 10px;" src="">
+                
+            </a>
+
+-->
