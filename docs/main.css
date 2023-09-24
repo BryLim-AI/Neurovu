@@ -53,6 +53,7 @@ body{
     align-content: center;
     align-items: center;
     flex-direction: column;
+    color:white;
 }
 
 .glass_container > a:hover
