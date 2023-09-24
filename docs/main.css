@@ -18,8 +18,8 @@ body{
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     width:1000px;
-    height:450px;
-    margin-top: 5%;
+    height:400px;
+    margin-top: 1%;
     overflow-y: scroll;
     gap:10px;
     display: flex;
@@ -127,3 +127,55 @@ body{
     width:160px;
     height:90px;
 }
+.sideApps{
+    width:10px;
+    position: absolute;
+    top:70px;
+    right:75px;
+}
+.sideAppsIcon{
+    width:80px;
+    height: 80px;
+    border-radius: 50px;
+    padding:10px;
+    z-index: 99;
+
+}
+.with-black-bg2{
+    background-color: black;
+    display: inline-block;
+    border-radius: 50px;
+    width:80px;
+    height: 80px;
+}
+.gSearch{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    margin-top: 2%;
+}
+
+    /* Style the search input */
+    .gSearch input[type="text"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 500px;
+    }
+
+    /* Style the search button */
+    .gSearch button {
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    /* Style the search button on hover */
+    .gSearch button:hover {
+        background-color: #357ae8;
+    }

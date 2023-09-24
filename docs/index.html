@@ -6,7 +6,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Neurovu Tech</title>
+    <link href="./hover-min.css" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
+    <script>
+         function performSearch() {
+        var query = document.getElementById('search-query').value;
+        var searchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+
+        // Open the search results in a new tab
+        window.open(searchUrl, '_blank');
+
+        // Clear the input field
+        document.getElementById('search-query').value = '';
+    }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
@@ -15,6 +28,12 @@
           <p class="nav-item" id="date"></p>
         </div>
     </nav>
+
+<div class="gSearch">
+    <input type="text" id="search-query" placeholder="Enter your search query">
+    <button onclick="performSearch()" class="btn btn-dark"><img width="30" height="30" src="https://img.icons8.com/isometric/30/experimental-search-isometric.png" alt="experimental-search-isometric"/>
+    Search</button>
+</div>
 
     <div class="content_catalog">
         <div class="glass_container">
@@ -159,6 +178,24 @@
             </a>
         </div>
     </div>
+
+
+    <div class="sideApps">
+        
+        <a href="https://www.craft.do/" target="_blank" class="hvr-grow with-black-bg2">
+            <img class="sideAppsIcon"
+             src="https://cdn.dribbble.com/users/6569/screenshots/15471306/craft_dribbble.png">
+        </a>
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" target="_blank" class="hvr-grow with-black-bg2">
+            <img class="sideAppsIcon" 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png">
+        </a>
+        <a href="" target="_blank" class="hvr-grow">
+            <img class="sideAppsIcon" 
+            src="">
+        </a>
+    </div>
+
 
     <script src="./libs/moment.github.io_luxon_global_luxon.min.js"></script>
     <script>
