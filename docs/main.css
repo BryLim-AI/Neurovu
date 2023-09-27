@@ -180,3 +180,11 @@ body{
     .gSearch button:hover {
         background-color: #357ae8;
     }
+
+
+footer{
+    width:100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
