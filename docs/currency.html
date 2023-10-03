@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Neurovu Tech</title>
+    <link href="./hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        .moneyInput{
+            width:500px;
+            padding:10px;
+        }
+        .converter{
+            display: flex;
+            justify-content: center;
+            gap:10px;
+            flex-wrap: wrap;
+        }
+        #result{
+            background-color: red;
+            color: white;
+           border-radius: 10px;
+           margin:10px;
+           text-align: center;
+           font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Neurovu Tech</a>
+          <p class="nav-item" id="date"></p>
+        </div>
+    </nav>
+    <h3 class="secTitle">Currency to Word Converter</h3>
+
+    <div class="converter">
+    <input type="number" id="amount" placeholder="Enter amount" class="form-control moneyInput">
+    <button onclick="convertToWords()" class="btn btn-dark">Convert</button>
+  
+    </div>
+  <p id="result"></p>
+    
+    <script src="./libs/moment.github.io_luxon_global_luxon.min.js"></script>
+    <script>
+        const now = luxon.DateTime.local();
+        const formattedDateAndDay = now.setLocale('zh').toLocaleString({
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        document.getElementById('date').textContent = formattedDateAndDay;
+
+
+        function convertToWords() {
+            const input = document.getElementById("amount").value;
+            const [pesosStr, centsStr] = input.split(".");
+            
+            if (!pesosStr || isNaN(pesosStr) || (centsStr && isNaN(centsStr))) {
+                document.getElementById("result").innerText = "Please enter a valid currency amount.";
+                return;
+            }
+
+            const pesos = parseFloat(pesosStr);
+            const cents = centsStr ? parseInt(centsStr) : 0;
+
+            const pesosWords = numberToWords(pesos);
+            const centsWords = numberToWords(cents);
+
+            const resultText = `In words: ${pesosWords} pesos and ${centsWords} centavos only`;
+            document.getElementById("result").innerText = resultText;
+        }
+
+        // Function to convert a number to words
+        function numberToWords(number) {
+            const units = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+            const teens = ["", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+            const tens = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+
+            const thousands = ["", "Thousand", "Million", "Billion", "Trillion"];
+
+            const numToWords = (num, index) => {
+                if (num === 0) return "";
+                if (num < 10) return units[num] + " ";
+                if (num < 20) return teens[num - 10] + " ";
+                if (num < 100) return tens[Math.floor(num / 10)] + " " + numToWords(num % 10, index);
+
+                return units[Math.floor(num / 100)] + " Hundred " + numToWords(num % 100, index);
+            };
+
+            let result = "";
+
+            for (let i = 0; number > 0; i++) {
+                const chunk = number % 1000;
+                if (chunk !== 0) {
+                    result = numToWords(chunk, i) + thousands[i] + " " + result;
+                }
+                number = Math.floor(number / 1000);
+            }
+
+            return result.trim();
+        }
+
+
+
+    </script>
+</body>
+</html>
