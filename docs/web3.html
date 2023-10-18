@@ -16,35 +16,35 @@
           <p class="nav-item" id="date"></p>
         </div>
     </nav>
-    <h3 class="secTitle">AI Revolution</h3>
+    <h3 class="secTitle">Web3 University</h3>
     <div class="content_catalog">
         <div class="glass_container_2">
 
-            <a href="https://ai.google/" target="_blank" class="hvr-grow with-black-bg">
+            <a href="https://www.web3.university/" target="_blank" class="hvr-grow with-black-bg">
                 <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
-                src="https://ai.google/static/images/share.png" 
+                src="https://static.alchemyapi.io/images/assets/w3u-banner-3.png" 
                 class="secImg">
             </a>
 
-            <a href="https://openai.com/" target="_blank" class="hvr-grow with-black-bg">
+            <a href="https://university.alchemy.com/home/home" target="_blank" class="hvr-grow with-black-bg">
                 <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/OpenAI_Logo_%282%29.svg/2560px-OpenAI_Logo_%282%29.svg.png" 
+                src="https://www.alchemy.com/university/twitter-image.png?cf2a65da5859952b" 
                 class="secImg">
             </a>
 
-            <a href="https://ai.meta.com/" target="_blank" class="hvr-grow with-black-bg">
+            <a href="https://thirdweb.com/" target="_blank" class="hvr-grow with-black-bg">
                 <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
-                src="https://pbs.twimg.com/media/FUQdx_tVEAAL6Z3?format=jpg&name=4096x4096" 
+                src="https://thirdweb.com/thirdweb.png" 
                 class="secImg">
             </a>
 
-            <a href="https://www.dev-tools.ai/" target="_blank" class="hvr-grow with-black-bg">
+            <a href="https://moralis.io/?" target="_blank" class="hvr-grow with-black-bg">
                 <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
-                src="https://uploads-ssl.webflow.com/63877fab0e555d695f35d8c6/6387c86b3810ef7b1c758691_devtools-green.png" 
+                src="https://assets-global.website-files.com/636a205ea69803b00b008bbc/651f6587bbb40052ce70f9e0_hpmeta.png" 
                 class="secImg">
             </a>
 
-            <a href="" target="_blank" class="hvr-grow with-black-bg">
+            <a href="https://decentraweb.org/" target="_blank" class="hvr-grow with-black-bg">
                 <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
                 src="" 
                 class="secImg">
@@ -114,5 +114,17 @@
             
         </div>
     </div>
+
+    <script src="./libs/moment.github.io_luxon_global_luxon.min.js"></script>
+    <script>
+        const now = luxon.DateTime.local();
+        const formattedDateAndDay = now.setLocale('zh').toLocaleString({
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        document.getElementById('date').textContent = formattedDateAndDay;
+    </script>
 </body>
 </html>
