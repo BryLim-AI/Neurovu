@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Neurovu Tech</title>
+    <link href="./hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Neurovu Tech</a>
+          <p class="nav-item" id="date"></p>
+        </div>
+    </nav>
+    <h3 class="secTitle">Office | Creative Tools</h3>
+    <div class="content_catalog">
+        <div class="glass_container_2">
+
+            <a href="https://www.canva.com/" target="_blank" class="hvr-grow with-black-bg">
+                <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
+                src="https://play-lh.googleusercontent.com/3aWGqSf3T_p3F6wc8FFvcZcnjWlxpZdNaqFVEvPwQ1gTOPkVoZwq6cYvfK9eCkwCXbRY" 
+                class="secImg">
+            </a>
+
+            <a href="https://www.office.com/" target="_blank" class="hvr-grow with-black-bg">
+                <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
+                src="https://logos-world.net/wp-content/uploads/2021/02/Microsoft-Office-365-Logo.png" 
+                class="secImg">
+            </a>
+
+            <a href="" target="_blank" class="hvr-grow with-black-bg">
+                <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
+                src="" 
+                class="secImg">
+            </a>
+
+            <a href="" target="_blank" class="hvr-grow with-black-bg">
+                <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
+                src="" 
+                class="secImg">
+            </a>
+
+            <a href="" target="_blank" class="hvr-grow with-black-bg">
+                <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
+                src="" 
+                class="secImg">
+            </a>
+
+            <a href="" target="_blank" class="hvr-grow with-black-bg">
+                <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
+                src="" 
+                class="secImg">
+            </a>
+
+            <a href="" target="_blank" class="hvr-grow with-black-bg">
+                <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
+                src="" 
+                class="secImg">
+            </a>
+
+            <a href="" target="_blank" class="hvr-grow with-black-bg">
+                <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
+                src="" 
+                class="secImg">
+            </a>
+
+            <a href="" target="_blank" class="hvr-grow with-black-bg">
+                <img  data-bs-toggle="tooltip" data-bs-placement="top" title="" 
+                src="" 
+                class="secImg">
+            </a>
+           
+            
+            
+        </div>
+    </div>
+
+    <script src="./libs/moment.github.io_luxon_global_luxon.min.js"></script>
+    <script>
+        const now = luxon.DateTime.local();
+        const formattedDateAndDay = now.setLocale('zh').toLocaleString({
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        document.getElementById('date').textContent = formattedDateAndDay;
+    </script>
+</body>
+</html>
